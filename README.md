@@ -1,6 +1,6 @@
 # Isotope-editor
 Isotope is a Text editor written in Rust.
-I'm doing this, because I am very particular about the editors I use, and switch constantly, so to fix that, this project exists.
+I'm building this, because I am very particular about the editors I use, and switch constantly, so to fix that, this project exists.
 Isotope will support plugins like any other big Editor you might think of like VSCode, Atom/Pulsar, Vim/NeoVim, etc.
 I'm trying to make something like 4Coder, with the extendability of NeoVim and ease of use that VSCode/Sublime Text provides.
 
