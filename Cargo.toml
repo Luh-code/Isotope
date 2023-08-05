@@ -5,6 +5,8 @@ edition = "2021"
 resolver = "2"
 
 [dependencies]
+colored = "2.0.4"
+dl_api = "0.4.0"
 env_logger = "0.10.0"
 iced = { version = "0.10.0", features = ["debug", "lazy"] }
 winit = "0.28.6"

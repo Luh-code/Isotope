@@ -3,7 +3,7 @@ use crate::window::style;
 use iced::alignment::{self, Alignment};
 use iced::event::{self, Event};
 use iced::executor;
-use iced::keyboard;
+use iced::keyboard::{self, KeyCode, Modifiers};
 use iced::subscription;
 use iced::theme::{self, Theme};
 use iced::widget::pane_grid::{self, PaneGrid};
@@ -13,6 +13,7 @@ use iced::widget::{
 use iced::{
   Application, Color, Command, Element, Length, Settings, Size, Subscription,
 };
+use crate::window::keybinds::input_manager;
 
 pub fn create_window() -> iced::Result {
   Editor::run(Settings::default())
@@ -37,7 +38,7 @@ pub enum Message {
   Restore,
   Close(pane_grid::Pane),
   CloseFocused,
-  KeyPressed(winit::event::VirtualKeyCode, winit::event::ModifiersState),
+  KeyPressed(KeyCode, Modifiers),
 }
 
 impl Application for Editor {
@@ -144,7 +145,7 @@ impl Application for Editor {
         }
       }
       Message::KeyPressed(key_code, modifiers) => {
-        if key_code == winit::event::VirtualKeyCode::C && modifiers.ctrl() {
+        if key_code == KeyCode::C && modifiers.control() {
           println!("'Ctrl + C' combination is being pressed");
         }
       }
@@ -163,7 +164,7 @@ impl Application for Editor {
         Event::Keyboard(keyboard::Event::KeyPressed {
           key_code,
           modifiers,
-        }) if modifiers.control() => handle_hotkey(key_code),
+        }) => Some(Message::KeyPressed( key_code, modifiers )),
         _ => None,
       }
     })
@@ -243,25 +244,24 @@ const PANE_ID_COLOR_FOCUSED: Color = Color::from_rgb(
   0x47 as f32 / 255.0,
 );
 
-fn handle_hotkey(key_code: keyboard::KeyCode) -> Option<Message> {
-  use keyboard::KeyCode;
-  use pane_grid::{Axis, Direction};
+// fn handle_hotkey(key_code: keyboard::KeyCode) -> Option<Message> {
+//   use pane_grid::{Axis, Direction};
 
-  let direction = match key_code {
-    KeyCode::Up => Some(Direction::Up),
-    KeyCode::Down => Some(Direction::Down),
-    KeyCode::Left => Some(Direction::Left),
-    KeyCode::Right => Some(Direction::Right),
-    _ => None,
-  };
+//   let direction = match key_code {
+//     KeyCode::Up => Some(Direction::Up),
+//     KeyCode::Down => Some(Direction::Down),
+//     KeyCode::Left => Some(Direction::Left),
+//     KeyCode::Right => Some(Direction::Right),
+//     _ => None,
+//   };
 
-  match key_code {
-    KeyCode::V => Some(Message::SplitFocused(Axis::Vertical)),
-    KeyCode::H => Some(Message::SplitFocused(Axis::Horizontal)),
-    KeyCode::W => Some(Message::CloseFocused),
-    _ => direction.map(Message::FocusAdjacent),
-  }
-}
+//   match key_code {
+//     KeyCode::V => Some(Message::SplitFocused(Axis::Vertical)),
+//     KeyCode::H => Some(Message::SplitFocused(Axis::Horizontal)),
+//     KeyCode::W => Some(Message::CloseFocused),
+//     _ => direction.map(Message::FocusAdjacent),
+//   }
+// }
 
 #[derive(Clone, Copy)]
 struct Pane {
