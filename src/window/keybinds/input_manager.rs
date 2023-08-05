@@ -5,36 +5,37 @@ use std::collections::hash_map::DefaultHasher;
 use colored::Colorize;
 
 // Struct to describe a KeyBinding
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, Eq, PartialEq)]
 pub struct KeyBinding {
-	pub key: KeyCode,
+	pub key_code: KeyCode,
 	pub modifiers: Modifiers,
-}
-
-
-impl KeyBinding {
-	// Returns true if the inputs match the saved values
-	pub fn is_true(&self, key_in: &KeyCode, modifiers_in: &Modifiers) -> bool {
-		self.key == *key_in && *modifiers_in == self.modifiers
-	}
 }
 
 // Implement hashing for KeyBinding
 impl Hash for KeyBinding {
 	fn hash<H: Hasher>(&self, state: &mut H) {
-		self.key.hash(state);
+		self.key_code.hash(state);
 		self.modifiers.hash(state);
 	}
 }
 
 // Srtuct to manage key Bindings
+#[derive(Debug)]
 pub struct KeyBindingManager {
-	aliases: Vec<String>,
-	hashes: Vec<u64>,
-	key_bindings: Vec<KeyBinding>,
+	pub aliases: Vec<String>,
+	pub hashes: Vec<u64>,
+	pub key_bindings: Vec<KeyBinding>,
 }
 
 impl KeyBindingManager {
+	pub fn new() -> Self {
+		KeyBindingManager{
+			aliases: Vec::<String>::new(),
+			hashes: Vec::<u64>::new(),
+			key_bindings: Vec::<KeyBinding>::new(),
+		}
+	}
+
 	// Adds a key binding
 	pub fn add_key_binding(&mut self, binding: KeyBinding, alias: String, add_anyways: bool) -> i32 {
 		let mut hasher = DefaultHasher::new();
@@ -55,8 +56,8 @@ impl KeyBindingManager {
 	}
 
 	// Removes a key binding
-	pub fn remove_key_binding(&mut self, alias: String) -> bool {
-		let temp = self.aliases.iter().position(|x| *x == alias );
+	pub fn remove_key_binding(&mut self, alias: &String) -> bool {
+		let temp = self.aliases.iter().position(|x| *x == *alias );
 		if temp == None {
 			return false
 		}
@@ -69,8 +70,8 @@ impl KeyBindingManager {
 	}
 
 	// Gets the key binding, that corresponds to the alias
-	pub fn get_key_binding(&self, alias: String) -> Option<&KeyBinding> {
-		let temp = self.aliases.iter().position(|x| *x == alias);
+	pub fn get_key_binding(&self, alias: &String) -> Option<&KeyBinding> {
+		let temp = self.aliases.iter().position(|x| *x == *alias);
 		if temp == None {
 			return None
 		}
