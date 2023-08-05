@@ -1,5 +1,5 @@
 use crate::window::style;
-
+use std::vec::Vec;
 use iced::alignment::{self, Alignment};
 use iced::event::{self, Event};
 use iced::executor;
@@ -13,16 +13,26 @@ use iced::widget::{
 use iced::{
   Application, Color, Command, Element, Length, Settings, Size, Subscription,
 };
-use crate::window::keybinds::input_manager;
+use crate::window::keybinds::input_manager::{
+  KeyBinding,
+  KeyBindingManager,
+};
 
-pub fn create_window() -> iced::Result {
-  Editor::run(Settings::default())
+pub struct EditorFlags {
+  pub key_binding_manager: KeyBindingManager,
+}
+
+
+pub fn create_window(flags: EditorFlags) -> iced::Result {
+  let settings = iced::Settings::<_>::with_flags(flags);
+  Editor::run(settings)
 }
 
 pub struct Editor {
   panes: pane_grid::State<Pane>,
   panes_created: usize,
   focus: Option<pane_grid::Pane>,
+  key_binding_manager: KeyBindingManager,
 }
 
 #[derive(Debug, Clone, Copy)]
@@ -45,9 +55,9 @@ impl Application for Editor {
   type Message = Message;
   type Theme = Theme;
   type Executor = executor::Default;
-  type Flags = ();
+  type Flags = EditorFlags;
 
-  fn new(_flags: ()) -> (Self, Command<Message>) {
+  fn new(flags: EditorFlags) -> (Self, Command<Message>) {
     let (panes, _) = pane_grid::State::new(Pane::new(0));
 
     (
@@ -55,13 +65,14 @@ impl Application for Editor {
         panes,
         panes_created: 1,
         focus: None,
+        key_binding_manager: flags.key_binding_manager
       },
       Command::none(),
     )
   }
 
   fn title(&self) -> String {
-    String::from("Pane grid - Iced")
+    String::from("Isotope")
   }
 
   fn update(&mut self, message: Message) -> Command<Message> {
@@ -145,8 +156,16 @@ impl Application for Editor {
         }
       }
       Message::KeyPressed(key_code, modifiers) => {
-        if key_code == KeyCode::C && modifiers.control() {
-          println!("'Ctrl + C' combination is being pressed");
+        let actuated = self.key_binding_manager.get_actuated(&KeyBinding{
+          key_code:key_code,
+          modifiers: modifiers,
+        });
+        for index in actuated {
+          let temp = self.key_binding_manager.get_alias(index);
+          if temp == None {
+            continue;
+          }
+          println!("Key binding '{}' is being acuated!", temp.unwrap());
         }
       }
     }
@@ -164,7 +183,9 @@ impl Application for Editor {
         Event::Keyboard(keyboard::Event::KeyPressed {
           key_code,
           modifiers,
-        }) => Some(Message::KeyPressed( key_code, modifiers )),
+        }) => {
+          Some(Message::KeyPressed(key_code, modifiers))
+        },
         _ => None,
       }
     })
@@ -316,7 +337,7 @@ fn view_content<'a>(
   //   );
   // }
 
-  let mut controls = column![
+  let controls = column![
     text("test")
     .width(Length::Fill)
     .horizontal_alignment(alignment::Horizontal::Center)

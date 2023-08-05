@@ -19,7 +19,7 @@ impl Hash for KeyBinding {
 	}
 }
 
-// Srtuct to manage key Bindings
+// Struct to manage key Bindings
 #[derive(Debug)]
 pub struct KeyBindingManager {
 	pub aliases: Vec<String>,
@@ -82,5 +82,23 @@ impl KeyBindingManager {
 	// Gets all aliases
 	pub fn get_all_keys(&self) -> &Vec<String> {
 		&self.aliases
+	}
+
+	pub fn get_actuated(&self, binding: &KeyBinding) -> Vec<usize> {
+		let mut options = Vec::<usize>::new();
+		for index in 0..=self.key_bindings.len()-1 {
+			if self.key_bindings[index] == *binding {
+				options.push(index);
+			}
+		}
+		options
+	}
+
+	pub fn get_alias(&self, index: usize) -> Option<&String> {
+		if index >= self.aliases.len() {
+			println!("{} {}", index, "is out of bounds for aliases".red());
+			return None
+		}
+		Some(&self.aliases[index])
 	}
 }
