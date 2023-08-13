@@ -1,0 +1,188 @@
+{
+  "main": {
+    "id": "5ae29d9fc8da1835",
+    "type": "split",
+    "children": [
+      {
+        "id": "555825a7b03e6107",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e142c46303baac86",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Systems/Message System.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "88cb1d4a07eaef30",
+    "type": "split",
+    "children": [
+      {
+        "id": "849143156586c1ea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "692aa45f7f400b64",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d8b7e5233c252deb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ca5bfc03b60f2268",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "541df548f596a7d9",
+    "type": "split",
+    "children": [
+      {
+        "id": "e4d7a6ef3124e639",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "72edf47b040214d4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Systems/Message System.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "34f31a869129c8de",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "cfcf3de69d65a376",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "c8e1140d70805695",
+            "type": "leaf",
+            "state": {
+              "type": "example-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-pomodoro-plugin:Tomodoro Timer": false
+    }
+  },
+  "active": "e142c46303baac86",
+  "lastOpenFiles": [
+    "dev/Kanban.md",
+    "Systems/Message System.md",
+    "Systems/Plugins.md",
+    "Systems/Editor Plugin.md",
+    "Systems",
+    "Finish Plugin Interface.md",
+    "dev",
+    "Untitled.md",
+    "asdasd.md",
+    "Projects/3D Engine/Structure.md",
+    "Projects/3D Engine/Drawing 2023-07-16 12.40.37.excalidraw.md",
+    "Projects/3D Engine/Bus Protocols.md",
+    "Projects/3D Engine/Logic Processor.md",
+    "Projects/3D Engine/Memory Handler.md",
+    "Projects/3D Engine/Graphics Co-processor.md",
+    "Projects/3D Engine/Naming Ideas.md",
+    "Areas/Attachments",
+    "\"Logic.md",
+    "Logic.md",
+    "Projects/3D Engine",
+    "Projects/Geschi Präsi/Timeline.excalidraw.md",
+    "Projects/Umbra/Untitled Kanban.md",
+    "Projects/Umbra/Engine/Structure.md",
+    "Projects/Umbra/Engine/hexagonal Software archtiecture.png",
+    "Projects/SafetyProtocol/Secure.md",
+    "Projects/SafetyProtocol",
+    "SoA.md",
+    "Areas/Game Ideas/Quest Setups/Future.md",
+    "Projects/Rail/Native Rail Interface Markup Spec.md",
+    "Projects/Rail/Rail Idea.md",
+    "Fragen.md",
+    "Areas/Game Ideas/Weirdcore Horror Game/Idea.md",
+    "Projects/Thesis/Untitled.canvas",
+    "Projects/Umbra/Engine",
+    "Areas/Game Ideas/Weirdcore Horror Game",
+    "Areas/School/Deusch",
+    "Areas/School/PoWi",
+    "Areas/School",
+    "Untitled.canvas"
+  ]
+}
