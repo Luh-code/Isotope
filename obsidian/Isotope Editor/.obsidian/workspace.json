@@ -4,18 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "555825a7b03e6107",
+        "id": "59a478af86f7df01",
         "type": "tabs",
         "children": [
           {
-            "id": "e142c46303baac86",
+            "id": "fc277eec672483bf",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Systems/Message System.md",
-                "mode": "source",
-                "source": false
+                "file": "Systems/Modules and Communication.excalidraw.md"
               }
             }
           }
@@ -86,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Systems/Message System.md",
+                "file": "Systems/Modules and Communication.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,17 +110,9 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
-          },
-          {
-            "id": "c8e1140d70805695",
-            "type": "leaf",
-            "state": {
-              "type": "example-view",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -139,16 +129,21 @@
       "obsidian-advanced-slides:Show Slide Preview": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-pomodoro-plugin:Tomodoro Timer": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "e142c46303baac86",
+  "active": "fc277eec672483bf",
   "lastOpenFiles": [
-    "dev/Kanban.md",
     "Systems/Message System.md",
-    "Systems/Plugins.md",
-    "Systems/Editor Plugin.md",
+    "Systems/Specs/Tabula Rasa Example.excalidraw.md",
+    "Systems/Modules and Communication.excalidraw.md",
+    "Systems/Modules.md",
+    "dev/Kanban.md",
+    "Systems/Specs/Tabula Rasa.md",
+    "Systems/Ion Editor.md",
+    "Systems/Specs/Aesthetic.md",
+    "Systems/Plugin.md",
+    "Systems/Specs",
     "Systems",
     "Finish Plugin Interface.md",
     "dev",
@@ -172,17 +167,11 @@
     "Projects/SafetyProtocol/Secure.md",
     "Projects/SafetyProtocol",
     "SoA.md",
-    "Areas/Game Ideas/Quest Setups/Future.md",
-    "Projects/Rail/Native Rail Interface Markup Spec.md",
-    "Projects/Rail/Rail Idea.md",
-    "Fragen.md",
-    "Areas/Game Ideas/Weirdcore Horror Game/Idea.md",
     "Projects/Thesis/Untitled.canvas",
     "Projects/Umbra/Engine",
     "Areas/Game Ideas/Weirdcore Horror Game",
     "Areas/School/Deusch",
     "Areas/School/PoWi",
-    "Areas/School",
     "Untitled.canvas"
   ]
 }

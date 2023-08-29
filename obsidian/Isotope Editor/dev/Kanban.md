@@ -6,17 +6,17 @@ kanban-plugin: basic
 
 ## -- TODO --
 
-- [ ] ### Editor Plugin<br>More information at [[Editor Plugin]]
+- [ ] ### Editor Plugin<br>More information at [[Ion Editor]]
 
 
 ## -- HOLD --
 
-- [ ] ## Finish Plugin system<br>- [ ] Finish spec [[Plugins]]<br>- [ ] Implement spec as trait
+- [ ] ## Refactor Message System<br>Find more information under [[Message System]]
 
 
 ## -- DOIN --
 
-- [ ] ## Refactor Message System<br>Find more information under [[Message System]]
+- [ ] ## Finish Plugin system<br>- [x] Finish spec [[Modules]]<br>- [ ] Implement spec as trait
 
 
 ## -- DONE --
