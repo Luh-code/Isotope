@@ -1,0 +1,109 @@
+{
+  "main": {
+    "id": "5ae29d9fc8da1835",
+    "type": "split",
+    "children": [
+      {
+        "id": "048bef0475dbde43",
+        "type": "leaf",
+        "state": {
+          "type": "excalidraw",
+          "state": {
+            "file": "Projects/Geschi Präsi/Timeline.excalidraw.md"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "88cb1d4a07eaef30",
+    "type": "split",
+    "children": [
+      {
+        "id": "849143156586c1ea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "692aa45f7f400b64",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "d8b7e5233c252deb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 263
+  },
+  "right": {
+    "id": "541df548f596a7d9",
+    "type": "split",
+    "children": [
+      {
+        "id": "e4d7a6ef3124e639",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "72edf47b040214d4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Projects/Geschi Präsi/Timeline.excalidraw.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "34f31a869129c8de",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "048bef0475dbde43",
+  "lastOpenFiles": [
+    "Projects/Geschi Präsi/Tagung des Gesamtdeutschen Parlaments.md",
+    "Projects/Geschi Präsi/Timeline.excalidraw.md",
+    "Projects/Geschi Präsi/Ende Der Revolution.md",
+    "Projects/Geschi Präsi/Index.md",
+    "Projects/Geschi Präsi/Paulskirchenverfassung.md",
+    "Projects/Geschi Präsi/Konterrevolution 1848.md",
+    "Projects/Geschi Präsi/König Wilhelm IV.md",
+    "Projects/Geschi Präsi/Parlamentsauflösung Mai.md",
+    "Projects/Geschi Präsi/Bilder/Pasted Image 20221012165257_182.jpg",
+    "Projects/Geschi Präsi/Bilder/Friedrich_Wilhelm_IV_von_preussen_1847_540.jpg"
+  ]
+}

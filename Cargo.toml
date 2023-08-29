@@ -1,5 +1,5 @@
 [package]
-name = "editor"
+name = "isotope_core"
 version = "0.1.0"
 edition = "2021"
 resolver = "2"
@@ -10,3 +10,8 @@ dl_api = "0.4.0"
 env_logger = "0.10.0"
 iced = { version = "0.10.0", features = ["debug", "lazy"] }
 winit = "0.28.6"
+bitflags = "2.4.0"
+libloading = "0.8.0"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
